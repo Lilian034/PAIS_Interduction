@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>系统架构 - CAPSTONE 2025</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">C</div>
+                <span class="logo-text">CAPSTONE 2025</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="team.html">TEAM</a></li>
+                <li><a href="system.html" class="active">SYSTEM</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 系统架构内容区 -->
+    <div class="container" style="margin-top: 100px;">
+        <section class="section">
+            <div class="section-header">
+                <span class="section-tag">TECHNICAL OVERVIEW</span>
+                <h2 class="section-title">SYSTEM ARCHITECTURE</h2>
+                <p class="section-description">
+                    A comprehensive look at our intelligent, scalable, and secure system design
+                </p>
+            </div>
+
+            <div class="cards-grid">
+                <!-- 民众问答系统 -->
+                <div class="card system-card">
+                    <div class="card-icon">
+                        💬
+                    </div>
+                    <h3 class="card-title">Public Q&A System</h3>
+                    <p class="card-description">
+                        Intelligent question and answer system for public inquiries with AI-powered responses
+                    </p>
+                    <br>
+                    <a href="system01.html" class="cta-button" style="display: inline-block; padding: 0.7rem 2rem; font-size: 0.9rem;">
+                        查看详情 →
+                    </a>
+                </div>
+
+                <!-- 幕僚管理系统 -->
+                <div class="card system-card">
+                    <div class="card-icon">
+                        👥
+                    </div>
+                    <h3 class="card-title">Staff Management System</h3>
+                    <p class="card-description">
+                        Comprehensive management platform for staff operations, scheduling, and performance tracking
+                    </p>
+                    <br>
+                    <a href="system02.html" class="cta-button" style="display: inline-block; padding: 0.7rem 2rem; font-size: 0.9rem;">
+                        查看详情 →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技术特色区块 -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-tag">TECH STACK</span>
+                <h2 class="section-title">核心技术</h2>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🤖</div>
+                    <h3 class="card-title">AI 智能引擎</h3>
+                    <p class="card-description">
+                        采用先进的自然语言处理技术，实现智能问答与自动化处理
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔐</div>
+                    <h3 class="card-title">安全架构</h3>
+                    <p class="card-description">
+                        多层次安全防护机制，确保数据安全与隐私保护
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3 class="card-title">高效性能</h3>
+                    <p class="card-description">
+                        优化的系统架构设计，支持高并发访问与快速响应
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3 class="card-title">数据分析</h3>
+                    <p class="card-description">
+                        强大的数据分析与可视化功能，提供深入的业务洞察
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">☁️</div>
+                    <h3 class="card-title">云端部署</h3>
+                    <p class="card-description">
+                        基于云原生架构，实现弹性扩展与高可用性
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔄</div>
+                    <h3 class="card-title">持续集成</h3>
+                    <p class="card-description">
+                        自动化测试与部署流程，确保系统稳定性与快速迭代
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(44, 62, 80, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(44, 62, 80, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>

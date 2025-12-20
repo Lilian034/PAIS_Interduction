@@ -12,12 +12,18 @@
         <div class="nav-container">
             <a href="index.html" class="logo">
                 <img src="logo.jpg" alt="AIVA Logo" class="logo-icon">
-                <span class="logo-text">AIVA</span>
+                <span class="logo-text">B08 AI Virtual Assistant</span>
             </a>
             <ul class="nav-menu">
                 <li><a href="index.html" class="active">HOME</a></li>
                 <li><a href="team.html">TEAM</a></li>
-                <li><a href="system.html">SYSTEM</a></li>
+                <li class="dropdown">
+                    <a href="system.html">SYSTEM</a>
+                    <div class="dropdown-content">
+                        <a href="system01.html">民眾智慧問答系統</a>
+                        <a href="system02.html">政務分身管理系統</a>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
@@ -51,22 +57,36 @@
                 <span class="section-tag">PROJECT ORIGIN</span>
                 <h2 class="section-title">專題緣起與背景</h2>
             </div>
-            <div class="card">
-                <div class="card-description" style="text-align: left; line-height: 1.8;">
-                    <p style="margin-bottom: 1.5rem;">
-                        <strong style="color: var(--neon-cyan);">數位化時代的溝通挑戰：</strong>在資訊爆炸且傳播迅速的現代，公眾人物與組織的發言代表其品牌形象，且對大眾輿論與社會走向具深遠影響。然而，社群媒體普及導致資訊過載且良莠不齊，大眾更趨向重視資訊的「真實性」與「專業性」。
+            <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3 class="card-title">數位化時代的溝通挑戰</h3>
+                    <p class="card-description">
+                        在資訊爆炸且傳播迅速的現代，公眾人物與組織的發言代表其品牌形象，且對大眾輿論與社會走向具深遠影響。然而，社群媒體普及導致資訊過載且良莠不齊，大眾更趨向重視資訊的「真實性」與「專業性」。
                     </p>
+                </div>
 
-                    <p style="margin-bottom: 1.5rem;">
-                        <strong style="color: var(--neon-cyan);">專業知識表達的需求：</strong>隨著社會分工細化，專家學者、政治人物或企業主在公開場合需要展現具深度且精確的專業知識，才能贏得信任。
+                <div class="card">
+                    <div class="card-icon">🎓</div>
+                    <h3 class="card-title">專業知識表達的需求</h3>
+                    <p class="card-description">
+                        隨著社會分工細化，專家學者、政治人物或企業主在公開場合需要展現具深度且精確的專業知識，才能贏得信任。
                     </p>
+                </div>
 
-                    <p style="margin-bottom: 1.5rem;">
-                        <strong style="color: var(--neon-cyan);">目前痛點：</strong>現有的溝通與宣傳工作往往面臨內容產製耗時、專業術語轉錄錯誤率高、以及在多個AI工具（如語音轉文字、影片生成）間頻繁切換的低效率問題。
+                <div class="card">
+                    <div class="card-icon">⚠️</div>
+                    <h3 class="card-title">目前痛點</h3>
+                    <p class="card-description">
+                        現有的溝通與宣傳工作往往面臨內容產製耗時、專業術語轉錄錯誤率高、以及在多個AI工具（如語音轉文字、影片生成）間頻繁切換的低效率問題。
                     </p>
+                </div>
 
-                    <p>
-                        <strong style="color: var(--neon-cyan);">開發目標：</strong>本專題旨在為有專業溝通需求的人士提供一站式AI解決方案，實現「高品質內容生成」、「AI影音宣傳」與「專業智能問答」三大目標。
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3 class="card-title">開發目標</h3>
+                    <p class="card-description">
+                        本專題旨在為有專業溝通需求的人士提供一站式AI解決方案，實現「高品質內容生成」、「AI影音宣傳」與「專業智能問答」三大目標。
                     </p>
                 </div>
             </div>
@@ -78,7 +98,7 @@
                 <span class="section-tag">FEATURES</span>
                 <h2 class="section-title">專題特色</h2>
             </div>
-            <div class="cards-grid">
+            <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr);">
                 <div class="card">
                     <div class="card-icon">🔗</div>
                     <h3 class="card-title">一站式整合開發平台</h3>

@@ -523,3 +523,54 @@ body::before {
     0% { left: -100%; }
     100% { left: 100%; }
 }
+
+/* 流程圖展示 */
+.flow-diagram {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.flow-diagram:hover {
+    border-color: var(--neon-cyan);
+    box-shadow: 0 15px 50px rgba(0, 243, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.flow-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* 團隊成員下二置中 */
+.cards-grid.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.cards-grid.team-grid .team-card:nth-child(4),
+.cards-grid.team-grid .team-card:nth-child(5) {
+    grid-column: span 1;
+}
+
+.cards-grid.team-grid .team-card:nth-child(4) {
+    grid-column: 1 / 2;
+    margin-left: auto;
+    margin-right: 0.5rem;
+}
+
+.cards-grid.team-grid .team-card:nth-child(5) {
+    grid-column: 2 / 3;
+    margin-right: auto;
+    margin-left: 0.5rem;
+}

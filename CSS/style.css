@@ -554,23 +554,23 @@ body::before {
 /* 團隊成員下二置中 */
 .cards-grid.team-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 2rem;
 }
 
-.cards-grid.team-grid .team-card:nth-child(4),
-.cards-grid.team-grid .team-card:nth-child(5) {
-    grid-column: span 1;
+/* 前三個成員各佔兩列 */
+.cards-grid.team-grid .team-card:nth-child(1),
+.cards-grid.team-grid .team-card:nth-child(2),
+.cards-grid.team-grid .team-card:nth-child(3) {
+    grid-column: span 2;
 }
 
+/* 第四個成員從第2列開始，佔兩列（置中） */
 .cards-grid.team-grid .team-card:nth-child(4) {
-    grid-column: 1 / 2;
-    margin-left: auto;
-    margin-right: 0.5rem;
+    grid-column: 2 / 4;
 }
 
+/* 第五個成員從第4列開始，佔兩列（置中） */
 .cards-grid.team-grid .team-card:nth-child(5) {
-    grid-column: 2 / 3;
-    margin-right: auto;
-    margin-left: 0.5rem;
+    grid-column: 4 / 6;
 }

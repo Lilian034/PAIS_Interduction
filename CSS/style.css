@@ -574,3 +574,47 @@ body::before {
 .cards-grid.team-grid .team-card:nth-child(5) {
     grid-column: 4 / 6;
 }
+
+/* Footer 樣式 */
+.footer {
+    background: rgba(44, 62, 80, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 243, 255, 0.2);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 6rem;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.footer-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+    box-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.footer a {
+    color: var(--neon-cyan);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--text-light);
+    text-shadow: 0 0 10px var(--neon-cyan);
+}

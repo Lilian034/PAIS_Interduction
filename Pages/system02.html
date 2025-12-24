@@ -190,62 +190,48 @@
                 <h2 class="section-title">使用流程</h2>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
-                <!-- 左側：流程圖 -->
-                <div class="flow-diagram">
-                    <img src="../image/login.png" alt="政務分身管理系統 - 登入介面" class="flow-image" style="margin-bottom: 2rem;">
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem;">
-                        <img src="../image/doc.png" alt="政務文檔管理" class="flow-image">
-                        <img src="../image/data-proof.png" alt="資料校稿" class="flow-image">
-                        <img src="../image/promo.png" alt="文宣生成" class="flow-image">
-                        <img src="../image/voice.png" alt="語音生成" class="flow-image">
-                        <img src="../image/video.png" alt="短影音生成" class="flow-image">
-                        <img src="../image/monitor.png" alt="數據監控" class="flow-image">
+            <!-- 完整流程展示 -->
+            <div class="card flow-card">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
+                    <div>
+                        <img src="../image/login.png" alt="政務分身管理系統 - 登入介面" style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem;">
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem;">
+                            <img src="../image/doc.png" alt="政務文檔管理" style="width: 100%; border-radius: 6px;">
+                            <img src="../image/data-proof.png" alt="資料校稿" style="width: 100%; border-radius: 6px;">
+                            <img src="../image/promo.png" alt="文宣生成" style="width: 100%; border-radius: 6px;">
+                            <img src="../image/voice.png" alt="語音生成" style="width: 100%; border-radius: 6px;">
+                            <img src="../image/video.png" alt="短影音生成" style="width: 100%; border-radius: 6px;">
+                            <img src="../image/monitor.png" alt="數據監控" style="width: 100%; border-radius: 6px;">
+                        </div>
                     </div>
-                </div>
-
-                <!-- 右側：流程說明 -->
-                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                    <div class="card">
-                        <h3 class="card-title">1. 登入系統</h3>
-                        <p class="card-description">
-                            使用專屬帳號登入政務分身管理系統，進入清晰的導覽介面。
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <h3 class="card-title">2. 管理知識庫</h3>
-                        <p class="card-description">
-                            上傳最新文檔、演講稿、政績報告等資料，或刪除過時資訊。
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <h3 class="card-title">3. 校稿修正</h3>
-                        <p class="card-description">
-                            上傳影音逐字稿，AI 自動修正專業術語，人工確認後更新知識庫。
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <h3 class="card-title">4. 生成文宣</h3>
-                        <p class="card-description">
-                            選擇文稿類型，輸入需求，AI 根據知識庫與風格模型生成內容。
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <h3 class="card-title">5. 合成語音</h3>
-                        <p class="card-description">
-                            選擇音色，輸入或貼上文字內容，生成高品質語音檔案。
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <h3 class="card-title">6. 製作影音</h3>
-                        <p class="card-description">
-                            上傳照片與語音，快速生成 AI 短影音，預覽後下載使用。
-                        </p>
+                    <div>
+                        <h3 class="card-title" style="margin-bottom: 1.5rem;">完整使用流程說明</h3>
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <div>
+                                <h4 style="color: var(--neon-cyan); margin-bottom: 0.5rem;">1. 登入系統</h4>
+                                <p class="card-description">使用專屬帳號登入政務分身管理系統，進入清晰的導覽介面。</p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--neon-cyan); margin-bottom: 0.5rem;">2. 管理知識庫</h4>
+                                <p class="card-description">上傳最新文檔、演講稿、政績報告等資料，或刪除過時資訊。</p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--neon-cyan); margin-bottom: 0.5rem;">3. 校稿修正</h4>
+                                <p class="card-description">上傳影音逐字稿，AI 自動修正專業術語，人工確認後更新知識庫。</p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--neon-cyan); margin-bottom: 0.5rem;">4. 生成文宣</h4>
+                                <p class="card-description">選擇文稿類型，輸入需求，AI 根據知識庫與風格模型生成內容。</p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--neon-cyan); margin-bottom: 0.5rem;">5. 合成語音</h4>
+                                <p class="card-description">選擇音色，輸入或貼上文字內容，生成高品質語音檔案。</p>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--neon-cyan); margin-bottom: 0.5rem;">6. 製作影音</h4>
+                                <p class="card-description">上傳照片與語音，快速生成 AI 短影音，預覽後下載使用。</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

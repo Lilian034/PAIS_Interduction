@@ -20,21 +20,21 @@ const animateOnScroll = new IntersectionObserver((entries) => {
 
 // 初始化滾動動畫
 document.addEventListener('DOMContentLoaded', () => {
-    // 為所有卡片添加初始樣式和動畫
+    // 為所有卡片添加初始樣式和動畫 - 加快速度
     const cards = document.querySelectorAll('.card');
     cards.forEach((card, index) => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(30px)';
-        card.style.transition = `all 0.6s ease ${index * 0.1}s`;
+        card.style.transition = `all 0.4s ease ${index * 0.05}s`; // 從 0.6s 改為 0.4s，延遲從 0.1s 改為 0.05s
         animateOnScroll.observe(card);
     });
 
-    // 為section標題添加動畫
+    // 為section標題添加動畫 - 加快速度
     const sectionHeaders = document.querySelectorAll('.section-header');
     sectionHeaders.forEach(header => {
         header.style.opacity = '0';
         header.style.transform = 'translateY(20px)';
-        header.style.transition = 'all 0.8s ease';
+        header.style.transition = 'all 0.5s ease'; // 從 0.8s 改為 0.5s
         animateOnScroll.observe(header);
     });
 });
@@ -336,6 +336,92 @@ document.addEventListener('DOMContentLoaded', () => {
             logoIcon.style.boxShadow = `0 0 ${20 + glowIntensity * 30}px rgba(0, 243, 255, ${glowIntensity})`;
         }, 50);
     }
+});
+
+// 9. 卡片邊框霓虹呼吸光效
+// ========================================
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.card');
+    let breathIntensity = 0.3;
+    let breathDirection = 1;
+
+    setInterval(() => {
+        breathIntensity += breathDirection * 0.015;
+        if (breathIntensity >= 0.6 || breathIntensity <= 0.3) {
+            breathDirection *= -1;
+        }
+
+        cards.forEach(card => {
+            card.style.boxShadow = `
+                0 8px 32px rgba(0, 0, 0, 0.1),
+                0 0 ${15 + breathIntensity * 20}px rgba(0, 243, 255, ${breathIntensity}),
+                inset 0 0 ${10 + breathIntensity * 15}px rgba(0, 243, 255, ${breathIntensity * 0.2})
+            `;
+        });
+    }, 60);
+});
+
+// 10. Section 標題霓虹底線呼吸效果
+// ========================================
+document.addEventListener('DOMContentLoaded', () => {
+    const sectionTitles = document.querySelectorAll('.section-title');
+    let glowPhase = 0;
+
+    setInterval(() => {
+        glowPhase += 0.03;
+        const intensity = 0.4 + Math.sin(glowPhase) * 0.3;
+
+        sectionTitles.forEach(title => {
+            title.style.textShadow = `
+                0 0 ${10 + intensity * 20}px rgba(0, 243, 255, ${intensity}),
+                0 0 ${20 + intensity * 30}px rgba(0, 243, 255, ${intensity * 0.5})
+            `;
+        });
+    }, 50);
+});
+
+// 11. 導航欄霓虹光效
+// ========================================
+document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        let navGlow = 0.2;
+        let navDirection = 1;
+
+        setInterval(() => {
+            navGlow += navDirection * 0.01;
+            if (navGlow >= 0.4 || navGlow <= 0.2) {
+                navDirection *= -1;
+            }
+
+            navbar.style.boxShadow = `
+                0 4px 20px rgba(0, 0, 0, 0.3),
+                0 0 ${15 + navGlow * 25}px rgba(0, 243, 255, ${navGlow})
+            `;
+        }, 70);
+    }
+});
+
+// 12. Section Tag 霓虹呼吸
+// ========================================
+document.addEventListener('DOMContentLoaded', () => {
+    const sectionTags = document.querySelectorAll('.section-tag');
+    let tagGlow = 0.5;
+    let tagDirection = 1;
+
+    setInterval(() => {
+        tagGlow += tagDirection * 0.02;
+        if (tagGlow >= 0.9 || tagGlow <= 0.5) {
+            tagDirection *= -1;
+        }
+
+        sectionTags.forEach(tag => {
+            tag.style.boxShadow = `
+                0 0 ${10 + tagGlow * 15}px rgba(0, 243, 255, ${tagGlow}),
+                inset 0 0 ${8 + tagGlow * 12}px rgba(0, 243, 255, ${tagGlow * 0.3})
+            `;
+        });
+    }, 55);
 });
 
 console.log('🚀 AIVA 科技感特效已加載');
